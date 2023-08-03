@@ -47,7 +47,7 @@ def main():
     if question:
         if "vs" in st.session_state:
             vector_store = st.session_state.vs
-            answer = utils.ask(question, k)
+            answer = utils.ask(question, vector_store, k)
             st.text_area(f"LLM Answer: {answer}")
 
             st.divider()
